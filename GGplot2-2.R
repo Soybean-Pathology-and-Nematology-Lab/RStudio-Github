@@ -6,7 +6,7 @@
 library(readxl)
 library(tidyverse)
 Farm <- read_excel("Farm_system.xlsx")
-child_data <- read_excel("Child_data.xlsx")
+#child_data <- read_excel("Child_data.xlsx")
 
 #Plot bacillulus vs acidimicrobium
 ggplot(Farm, aes(x=acidimicrobium, y=bacillus)) + 
@@ -27,7 +27,7 @@ ggplot(Farm, aes(x=acidimicrobium, y=bacillus)) +
 
 ggplot(Farm, aes(x=acidimicrobium, y=bacillus, color = System ))+ 
   geom_point() + 
-  facet_grid(cols = vars(Species))+
+  facet_grid(cols = vars(System))+
   labs(title= "Scatter plot", x= "acidimicrobium",y= "bacillus")
 
 ggplot(Farm, aes(x=acidimicrobium, y=bacillus, color = System))+ 
