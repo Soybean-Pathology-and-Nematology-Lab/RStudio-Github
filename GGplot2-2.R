@@ -27,7 +27,7 @@ ggplot(Farm, aes(x=acidimicrobium, y=bacillus)) +
 
 ggplot(Farm, aes(x=acidimicrobium, y=bacillus, color = System ))+ 
   geom_point() + 
-  facet_grid(cols = vars(Species))+
+  facet_grid(cols = vars(System))+
   labs(title= "Scatter plot", x= "acidimicrobium",y= "bacillus")
 
 ggplot(Farm, aes(x=acidimicrobium, y=bacillus, color = System))+ 
